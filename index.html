@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー — 一括PDF保存 for Gmail™</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0 auto; padding: 32px 20px 64px; max-width: 760px;
+         font: 16px/1.8 "Segoe UI", "Yu Gothic UI", "Noto Sans JP", sans-serif; color: #202124; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { background: #202124; color: #e8eaed; } th { background: #292a2d !important; } td, th { border-color: #3c4043 !important; } }
+  h1 { font-size: 24px; margin: 0 0 4px; }
+  h2 { font-size: 18px; margin: 32px 0 8px; }
+  .updated { color: #5f6368; font-size: 14px; margin: 0 0 24px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 15px; }
+  th, td { border: 1px solid #dadce0; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f1f3f4; }
+  code { font-family: Consolas, "Courier New", monospace; font-size: 14px; }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #dadce0; color: #5f6368; font-size: 14px; }
+</style>
+</head>
+<body>
+<h1>プライバシーポリシー</h1>
+<p class="updated">一括PDF保存 for Gmail™ ／ 最終更新日: 2026年9月10日</p>
+
+<h2>1. はじめに</h2>
+<p>「一括PDF保存 for Gmail™」（以下「本拡張機能」）は、Gmail の一覧で利用者が選択したメールを PDF ファイルとして保存する Chrome 拡張機能です。</p>
+<p>本拡張機能は、<strong>利用者のデータを収集、保存、送信しません</strong>。すべての処理は利用者のブラウザ内で完結します。開発者はサーバーを一切運用しておらず、利用者のデータを受け取ることはありません。</p>
+
+<h2>2. 本拡張機能が扱う情報</h2>
+<p>機能の提供に必要な範囲で、以下の情報をブラウザ内で一時的に扱います。</p>
+<table>
+  <tr><th>扱う情報</th><th>目的</th><th>保存場所と期間</th></tr>
+  <tr><td>利用者が選択したメールの識別子・件名・日付</td><td>PDF のファイル名を作り、対象のメールを特定するため</td><td>ブラウザのセッションストレージ。ブラウザを閉じると消去されます</td></tr>
+  <tr><td>選択したメールの本文（差出人、宛先、日時、本文、添付画像を含む）</td><td>PDF に描画するため</td><td>保存しません。PDF に書き出した時点で破棄されます</td></tr>
+</table>
+<p>これらは Chrome ウェブストアの分類でいう「個人的な通信」および「ウェブサイトのコンテンツ」に該当します。</p>
+
+<h2>3. 情報の送信について</h2>
+<p>本拡張機能は、利用者の情報を外部に送信しません。</p>
+<ul>
+  <li>開発者のサーバーはありません</li>
+  <li>第三者への提供、共有、販売は一切行いません</li>
+  <li>アクセス解析、広告、トラッキングの仕組みを含みません</li>
+  <li>通信を行うのは、利用者自身のブラウザが <code>https://mail.google.com</code> を表示するときのみです。これは利用者が既にログインしているセッションを用いた、Gmail への通常のアクセスです</li>
+</ul>
+
+<h2>4. 生成されたPDFの保存先</h2>
+<p>作成された PDF は、利用者のパソコンのダウンロードフォルダ内「Gmail一括PDF」フォルダに保存されます。ファイルは利用者の管理下にあり、開発者がアクセスすることはできません。</p>
+
+<h2>5. 権限の利用目的</h2>
+<table>
+  <tr><th>権限</th><th>利用目的</th></tr>
+  <tr><td><code>debugger</code></td><td>Chrome の印刷機能（DevTools Protocol の <code>Page.printToPDF</code>）を呼び出して PDF を生成するため。本拡張機能が自ら作成した非表示タブにのみ接続し、処理が終わり次第切断します。利用者が開いている他のタブに接続することはありません</td></tr>
+  <tr><td><code>downloads</code></td><td>生成した PDF をダウンロードフォルダへ保存するため。既存のダウンロード履歴の読み取りや変更は行いません</td></tr>
+  <tr><td><code>storage</code></td><td>処理中のジョブ情報（対象メールの識別子・件名・日付）を一時的に保持するため。セッション終了時に消去されます</td></tr>
+  <tr><td><code>https://mail.google.com/*</code></td><td>Gmail の画面にボタンを表示し、選択されたメールを読み取り、Gmail の印刷用ページを表示するため。これ以外のサイトへのアクセス権は要求していません</td></tr>
+</table>
+
+<h2>6. Limited Use（限定利用）への適合</h2>
+<p>本拡張機能によるデータの取り扱いは、Chrome ウェブストアのユーザーデータ ポリシー（Limited Use の要件を含む）に準拠します。取得した情報は、本拡張機能の単一の目的である「選択したメールを PDF として保存する」ためにのみ利用し、それ以外の目的には利用しません。</p>
+
+<h2>7. お問い合わせ</h2>
+<ul>
+  <li>開発者: （ここに開発者名または会社名を記入してください）</li>
+  <li>連絡先: （ここに連絡先メールアドレスを記入してください）</li>
+</ul>
+
+<h2>8. 本ポリシーの変更</h2>
+<p>本ポリシーを変更する場合は、本ページを更新し、最終更新日を改めます。</p>
+
+<footer>Gmail is a trademark of Google LLC. Use of this trademark is subject to Google Permissions.</footer>
+</body>
+</html>
